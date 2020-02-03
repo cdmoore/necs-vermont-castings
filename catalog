@@ -1,0 +1,326 @@
+<html><head><script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://www.fireplaces.com/syndication/builder/templates/js/HHTSyndicationJS.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://www.fireplaces.com/syndication/builder/templates/css/HHTSyndicationCSS.css">
+
+    <!--This is the JSON configuration that tells the system how to render your selections -->
+    </head><body><div id="site_configuration">{"SiteKey":"0011O000028OZEDQA4","Implementation":"Catalog","CatalogIncludeCoupon":true,"CatalogIncludeContact":true,"CustomIncludeProductFilter":true,"CustomIncludeCoupon":false,"CustomIncludeContact":false,"CustomBrandFilter":null,"CustomCategory":null,"CurrentUrl":null,"CurrentDomain":null,"HHTDomain":"https://www.fireplaces.com","IsMultipage":false,"Filters":null,"AdHocProducts":null,"ADHOCIncludeCoupon":false,"ADHOCIncludeContact":false}</div>
+
+    <script>
+        $j(document).ready(function () {
+            HHT.LoadConfig();
+            SyndicationUtility.loadHtml();
+        });
+    </script>
+
+    
+
+    <!-- Enter this code anywhere you wish within the body of your HTML -->
+    <div id="HHTSyndicatedCatalogContent">
+
+<script>
+
+        $j(document).ready(function () {
+
+            //if (debug) alert("template_runtime ready");
+
+            var productid = HHTUtility.getQuerystring("pid");
+            
+            switch (HHTConfig.Implementation) {
+                case "Catalog":
+                    HHT.setReferrerPanel("CategoryListPanel", "Categories");
+                    $j('#CategoryListPanel').show();
+                    $j('#ProductListPanel').hide();
+                    $j('#ProductDetailPanel').hide();
+                    break;
+                case "Custom":
+                    HHT.setReferrerPanel("ProductListPanel", "Products");
+                    $j('#ProductListPanel').show();
+                    $j('#ProductDetailPanel').hide();
+                    break;
+                case "AdHoc":
+                    HHT.setReferrerPanel("ProductListPanel", "Products");
+                    $j('#ProductListPanel').show();
+                    $j('#ProductDetailPanel').hide();
+                    break;
+                case "Coupon":
+                    $j('#CouponPanel').show();
+                    break;
+                case "Contact":
+                    $j('#ContactPanel').show();
+                    $j('#CTAContactBackLink').hide();
+                    $j('#ContactPanel').show();
+                    break;
+            }
+
+            if (productid) {
+                HHT.loadProductDetail(productid, true);
+                HHT.setReferrerPanel("ProductDetailPanel", "Product Detail");
+            }
+
+
+        });
+</script>
+
+
+<div id="bingo">
+
+    <input type="hidden" id="referrerPanel" name="referrerPanel" value="CategoryListPanel">
+    <input type="hidden" id="referrerTitle" name="referrerTitle" value="Categories">
+
+    <ul class="cta"><li><input type="button" value="Get Current Offer" onclick="HHT.openCoupon();"></li><li><input type="button" value="Contact Us" onclick="HHT.openContact();"></li></ul>
+    
+    <!--category segment start-->
+
+    <script>
+        $j(document).ready(function () {
+            HHT.loadCategories();
+        });
+    </script>
+
+    <div id="CategoryListPanel" class="syndication">
+        <div id="CategoryList">
+
+<ul>
+    
+                        
+            
+                    <li>
+                        <div><a onclick="HHT.loadProducts('{E6462049-3A15-43D3-8BDC-735483B03162}',true); return false;"><img src="https://www.fireplaces.com:443/en/Browse/Fireplaces/Gas-Fireplaces/-/media/images/hng/browse-images/hng_gasfireplaces_300x200.jpg?rev=e56d8e5002d04e228557a88529b227f7"></a></div>
+                        <p><a onclick="HHT.loadProducts('{E6462049-3A15-43D3-8BDC-735483B03162}',true); return false;">Gas Fireplaces</a></p>
+                    </li>
+                
+                    <li>
+                        <div><a onclick="HHT.loadProducts('{B3CF1330-8588-4694-9B7D-0A2BBE029509}',true); return false;"><img src="https://www.fireplaces.com:443/en/Browse/Fireplaces/Wood-Fireplaces/-/media/images/qdf/browse-images/qdf_pioneeriii_300x200.jpg?rev=ad4a5ec038034bcf8ba8cb28dbdd7c6a"></a></div>
+                        <p><a onclick="HHT.loadProducts('{B3CF1330-8588-4694-9B7D-0A2BBE029509}',true); return false;">Wood Fireplaces</a></p>
+                    </li>
+                
+                    <li>
+                        <div><a onclick="HHT.loadProducts('{D83A224C-5DB6-4E9E-9040-6D226610E261}',true); return false;"><img src="https://www.fireplaces.com:443/en/Browse/Fireplaces/Electric-Fireplaces/-/media/images/browse-images/sim_electricfireplaces_300x200.jpg?rev=89959c51791f4aedb664793eafdd8cba"></a></div>
+                        <p><a onclick="HHT.loadProducts('{D83A224C-5DB6-4E9E-9040-6D226610E261}',true); return false;">Electric Fireplaces</a></p>
+                    </li>
+                
+                    <li>
+                        <div><a onclick="HHT.loadProducts('{54F8308B-EEE1-495E-B57B-C8E0D45E6306}',true); return false;"><img src="https://www.fireplaces.com:443/en/Browse/Fireplaces/Outdoor-Fireplaces/-/media/images/browse-images/out_woodfireplaces_300x200.jpg?rev=ad3dbf9e328d474e97597d6f137b907d"></a></div>
+                        <p><a onclick="HHT.loadProducts('{54F8308B-EEE1-495E-B57B-C8E0D45E6306}',true); return false;">Outdoor Fireplaces</a></p>
+                    </li>
+                
+        
+                        
+            
+                    <li>
+                        <div><a onclick="HHT.loadProducts('{EFC5E904-2E3D-44E0-BC58-F28CC337C8CD}',true); return false;"><img src="https://www.fireplaces.com:443/en/Browse/Inserts/Electric-Inserts/-/media/images/product-images/simplifire-product-images/electric-insert/electric-insert-room-banner-300x200.jpg?rev=1cf7114eda294803ade96ac3f2ea9440"></a></div>
+                        <p><a onclick="HHT.loadProducts('{EFC5E904-2E3D-44E0-BC58-F28CC337C8CD}',true); return false;">Electric Fireplace Inserts</a></p>
+                    </li>
+                
+                    <li>
+                        <div><a onclick="HHT.loadProducts('{D0FE3A17-EC38-40E7-8B04-FF1617ACAC2A}',true); return false;"><img src="https://www.fireplaces.com:443/en/Browse/Inserts/Gas-Inserts/-/media/images/hng/product-images/inserts/escape-i35fb/escape35-ift_ironage-black_room_300x200.jpg?rev=5ac579855fbe4abe8b933e3c0c87a57e"></a></div>
+                        <p><a onclick="HHT.loadProducts('{D0FE3A17-EC38-40E7-8B04-FF1617ACAC2A}',true); return false;">Gas Fireplace Inserts</a></p>
+                    </li>
+                
+                    <li>
+                        <div><a onclick="HHT.loadProducts('{21F63661-013B-4A89-9C8B-CACA44892266}',true); return false;"><img src="https://www.fireplaces.com:443/en/Browse/Inserts/Wood-Inserts/-/media/images/qdf/browse-images/qdf_woodinserts_300x200.jpg?rev=2949d7e877ed4c1bbb4fea262c0b8f3b"></a></div>
+                        <p><a onclick="HHT.loadProducts('{21F63661-013B-4A89-9C8B-CACA44892266}',true); return false;">Wood Fireplace Inserts</a></p>
+                    </li>
+                
+        
+                        
+            
+                    <li>
+                        <div><a onclick="HHT.loadProducts('{EA3C00EE-A8DB-40E8-80D9-6804EA106BAD}',true); return false;"><img src="https://www.fireplaces.com:443/en/Browse/Stoves/Wood-Stoves/-/media/images/qdf/browse-images/qdf_woodstoves_300x200.jpg?rev=8e251773c2b64a739094e47c9ed3474d"></a></div>
+                        <p><a onclick="HHT.loadProducts('{EA3C00EE-A8DB-40E8-80D9-6804EA106BAD}',true); return false;">Wood Stoves</a></p>
+                    </li>
+                
+                    <li>
+                        <div><a onclick="HHT.loadProducts('{199C1C9F-11CF-49E6-930F-ACE7530ED753}',true); return false;"><img src="https://www.fireplaces.com:443/en/Browse/Stoves/Gas-Stoves/-/media/images/hng/browse-images/hng_gasstoves_300x200.jpg?rev=895da6ecc4ce49239241cd8a12bb4c25"></a></div>
+                        <p><a onclick="HHT.loadProducts('{199C1C9F-11CF-49E6-930F-ACE7530ED753}',true); return false;">Gas Stoves</a></p>
+                    </li>
+                
+        
+            <span id="ctl00_rptCategories_divCategory_3">
+                <li>
+                    <div><a onclick="HHT.loadProducts('{5CEBD95B-D9C5-4BC8-B8C7-A94D5380048B}',true); return false;"><img src="https://www.fireplaces.com:443/en/Browse/Fireboxes/-/media/images/hht/browse-images/hht_fireboxes_300x200.jpg?rev=d344ed3ce5ab4a85be4641af67d5ea95"></a></div>
+                    <p><a onclick="HHT.loadProducts('{5CEBD95B-D9C5-4BC8-B8C7-A94D5380048B}',true); return false;">Fireboxes</a></p>
+                </li>
+            </span>            
+            
+        
+            <span id="ctl00_rptCategories_divCategory_4">
+                <li>
+                    <div><a onclick="HHT.loadProducts('{8DD0609E-377F-482A-A9F2-0B97D912F596}',true); return false;"><img src="https://www.fireplaces.com:443/en/Browse/Gas-Logs/-/media/images/hht/browse-images/hht_gaslogs_300x200.jpg?rev=1608f15645a5467aa0b1f6f3125e85c1"></a></div>
+                    <p><a onclick="HHT.loadProducts('{8DD0609E-377F-482A-A9F2-0B97D912F596}',true); return false;">Gas Logs</a></p>
+                </li>
+            </span>            
+            
+        
+            <span id="ctl00_rptCategories_divCategory_5">
+                <li>
+                    <div><a onclick="HHT.loadProducts('{280292D7-CB98-48E0-A3D5-E511E0DF60D7}',true); return false;"><img src="https://www.fireplaces.com:443/en/Browse/Outdoor-Products/-/media/images/browse-images/out_products_300x200.jpg?rev=cff5d893ee4a44bda5395eb0a23be584"></a></div>
+                    <p><a onclick="HHT.loadProducts('{280292D7-CB98-48E0-A3D5-E511E0DF60D7}',true); return false;">Outdoor Products</a></p>
+                </li>
+            </span>            
+            
+        
+</ul></div>
+    </div>
+
+    <!-- category segment end -->
+    
+    
+    <!--product list segment start-->
+
+    <div id="ProductListPanel" class="syndication" style="display: none;">
+
+        <ul class="cta has-2">
+            <li><input type="button" value="Back to Categories" onclick="HHT.backToCategory(); return false"></li>
+        </ul>
+
+        <div id="ProductFilterPanel"></div>
+        <div id="ProductList"></div>
+    </div>
+
+    <!-- product list segment end -->
+    
+    
+    <!--product detail segment start-->
+
+    <div id="ProductDetailPanel" class="syndication" style="display: none;">
+
+        <ul class="cta has-2" id="ProductDetailNavUL">
+            <li><input type="button" value="Back to Products" onclick="HHT.backToProductList(); return false"></li>
+        </ul>
+
+        <div id="ProductDetail"></div>
+    </div>
+
+    <!-- product detail segment end -->
+    
+    
+    <!--coupon segment start-->
+
+    <script>
+        $j(document).ready(function () {
+            //if (debug) alert("lead_coupon ready");
+            HHT.bindCurrentOffer();
+        });
+    </script>
+
+
+    <div class="syndication">
+
+        <div id="CouponPanel" style="display:none;">
+
+            <input type="hidden" id="offerCount" name="offerCount" value="0">
+
+            <input type="button" id="CTACouponBackLink" value="BackNotSet">
+
+            <div id="OfferList" style="display:none;"></div>
+
+            <div id="CouponForm" style="display:none;">
+                <div class="form-content">
+
+                    <div id="navigate_back">
+                        <h1><a onclick="HHT.backToOfferList(); return false;">Back to Offer List</a></h1>
+                    </div>
+
+                    <input type="hidden" id="campaign_id">
+
+                    <center><h1 id="coupon_title">[[COUPON_TITLE]]</h1></center>
+                    <center><img id="coupon_image" src="[[COUPON_IMAGE]]"></center>
+                    <p id="coupon_description" class="description">[[COUPON_DESCRIPTION]]</p>
+
+                    <p><input type="text" id="couponFirstname" placeholder="First Name"></p>
+                    <p><input type="text" id="couponLastname" placeholder="Last Name"></p>
+                    <p><input type="text" id="couponEmail" placeholder="Email Address"></p>
+                    <p><input type="text" id="couponPhone" placeholder="Phone"></p>
+                    <p><input type="text" id="couponZip" placeholder="Postal Code"></p>
+                    <p class="fieldsRequired">**All fields are required**</p>
+
+                    <p><input type="button" value="Get Current Offer" onclick="HHT.submitCoupon(false); return false;"></p>
+
+
+
+                    <div class="result">
+                        <div id="SubmitError"></div>
+                    </div>
+
+                    <p class="disclaimer" id="coupon_disclaimer">[[COUPON_DISCLAIMER]]</p>
+
+                    <br>
+
+                </div>
+
+            </div>
+
+            <div class="result">
+                <div id="SubmitThankYou"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- coupon segment end -->
+    
+    
+    <!--contact us segment start-->
+
+    <div class="syndication">
+
+        <div id="ContactPanel" style="display:none;">
+
+            <input type="button" id="CTAContactBackLink" value="BackNotSet">
+
+            <div class="form-content" id="ContactForm">
+
+                <h2>Contact Us</h2>
+
+                <p class="description">Do you want more information about one of our products or current offers? Fill out the form below and we will be in touch shortly.</p>
+
+                <p><input type="text" id="contactFirstname" placeholder="First Name"></p>
+                <p><input type="text" id="contactLastname" placeholder="Last Name"></p>
+                <p><input type="text" id="contactEmail" placeholder="Email Address"></p>
+                <p><input type="text" id="contactPhone" placeholder="Phone"></p>
+                <p><input type="text" id="contactZip" placeholder="Postal Code"></p>
+                <p><input type="text" id="contactMessage" rows="4" placeholder="Your Message"></p>
+
+                <p class="fieldsRequired">**All fields are required**</p>
+
+                <p><input type="button" value="Send Contact Request" onclick="HHT.submitContactUs(); return false;"></p>
+
+                <div class="result">
+                    <div id="ContactSubmitError"></div>
+                </div>
+
+                <br>
+
+            </div>
+
+            <div class="result">
+                <div id="ContactSubmitThankYou"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- contact us segment end -->
+    
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+    </body></html>
